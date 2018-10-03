@@ -1,0 +1,9 @@
+function dxdt = pendulum(t,x);
+dxdt = zeros(2,1);
+L = 1;
+theta = x(1);
+gamma = x(2);
+dtheta = gamma;
+dgamma = -(9.81/L)*sin(theta);
+dxdt(1) = dtheta;
+dxdt(2) = dgamma;
